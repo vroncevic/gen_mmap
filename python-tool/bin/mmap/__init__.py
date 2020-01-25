@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 
 """
-    Generating setup.py
+    Generating Memory Map project
 """
 

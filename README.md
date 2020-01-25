@@ -9,9 +9,9 @@ other information that should be provided before the modules are installed.
 To install this set of modules type the following:
 
 ```
-cp -R ~/gen_mmap_scripts/bin/   /root/scripts/gen_mmap/ver.1.0/
-cp -R ~/gen_mmap_scripts/conf/  /root/scripts/gen_mmap/ver.1.0/
-cp -R ~/gen_mmap_scripts/log/   /root/scripts/gen_mmap/ver.1.0/
+cp -R ~/gen_mmap/bin/   /root/scripts/gen_mmap/ver.1.0/
+cp -R ~/gen_mmap/conf/  /root/scripts/gen_mmap/ver.1.0/
+cp -R ~/gen_mmap/log/   /root/scripts/gen_mmap/ver.1.0/
 ```
 
 ### DEPENDENCIES
@@ -22,7 +22,7 @@ This module requires these other modules and libraries:
 
 ### COPYRIGHT AND LICENCE
 
-Copyright (C) 2019 by https://vroncevic.github.io/mmap_skeleton/
+Copyright (C) 2019 by https://vroncevic.github.io/gen_mmap/
 
 This tool is free software; you can redistribute it and/or modify
 it under the same terms as Python itself, either Python version 2.7/3.4 or,
