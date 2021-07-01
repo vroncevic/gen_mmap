@@ -1,6 +1,6 @@
 <img align="right" src="https://raw.githubusercontent.com/vroncevic/gen_mmap/dev/docs/gen_mmap_logo.png" width="25%">
 
-# Generate Named Pipe
+# Generate Memory Map Modules
 
 **gen_mmap** is tool for generation of memory map modules.
 
