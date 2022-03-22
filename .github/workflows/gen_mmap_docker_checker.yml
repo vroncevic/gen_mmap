@@ -2,8 +2,12 @@ name: gen_mmap docker checker
 on:
   push:
     branches: [ master ]
+    paths:
+      - 'Dockerfile'
   pull_request:
     branches: [ master ]
+    paths:
+      - 'Dockerfile.py'
 jobs:
   build:
     runs-on: ubuntu-latest
