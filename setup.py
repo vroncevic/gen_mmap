@@ -113,9 +113,7 @@ setup(
     keywords='Unix, Linux, Development, Memory Map, Modules',
     platforms='POSIX',
     classifiers=PYP_CLASSIFIERS,
-    packages=[
-        'gen_mmap', 'gen_mmap.pro', 'gen_mmap.pro.config'
-    ],
+    packages=['gen_mmap', 'gen_mmap.pro'],
     install_requires=['ats-utilities'],
     package_data={
         'gen_mmap': [
