@@ -106,8 +106,26 @@ You can use docker to create image/container.
 
 Generator structure
 
-```
-
+```bash
+    gen_mmap/
+        ├── conf/
+        │   ├── gen_mmap.cfg
+        │   ├── gen_mmap.logo
+        │   ├── gen_mmap_util.cfg
+        │   ├── project.yaml
+        │   └── template/
+        │       └── generator_test.template
+        ├── __init__.py
+        ├── log/
+        │   └── gen_mmap.log
+        ├── pro/
+        │   ├── __init__.py
+        │   ├── read_template.py
+        │   └── write_template.py
+        └── run/
+            └── gen_mmap_run.py
+        
+        6 directories, 11 files
 ```
 
 ### Docs
