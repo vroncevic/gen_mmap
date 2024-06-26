@@ -23,8 +23,7 @@ Info
 import sys
 from typing import List, Dict
 from datetime import date
-from os import getcwd, chmod, mkdir
-from os.path import exists
+from os import chmod
 from string import Template
 
 try:
@@ -40,7 +39,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2024, https://vroncevic.github.io/gen_mmap'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/vroncevic/gen_mmap/blob/dev/LICENSE'
-__version__ = '1.8.6'
+__version__ = '1.0.0'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -102,18 +101,11 @@ class WriteTemplate(FileCheck):
         if not bool(templates):
             raise ATSValueError('missing templates')
         all_stat: List[bool] = []
-        pro_dir: str = f'{getcwd()}/{pro_name}/'
-        src_dir: str = f'{getcwd()}/{pro_name}/src'
-        build_dir: str = f'{getcwd()}/{pro_name}/build'
         num_of_modules: int = len(templates)
-        if not exists(pro_dir):
-            mkdir(pro_dir)
-            mkdir(src_dir)
-            mkdir(build_dir)
         for template_content in templates:
             module_name: str = list(template_content.keys())[0]
             template: Template = Template(template_content[module_name])
-            module_path: str = f'{pro_dir}{module_name}'
+            module_path: str = f'{module_name}'
             with open(module_path, 'w', encoding='utf-8') as module_file:
                 module_content: str = template.substitute(
                     {

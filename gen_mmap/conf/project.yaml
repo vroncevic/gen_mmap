@@ -1,5 +1,9 @@
 templates:
-  - generator_test.template
+  - mmap_segment.template
+  - read_mmap_segment.template
+  - write_mmap_segment.template
 
 modules:
-  - generator_test.txt
+  - mmap_segment.h
+  - read_mmap_segment.c
+  - write_mmap_segment.c
