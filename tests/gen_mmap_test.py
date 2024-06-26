@@ -37,7 +37,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2024, https://vroncevic.github.io/gen_mmap'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/vroncevic/gen_mmap/blob/dev/LICENSE'
-__version__ = '1.1.0'
+__version__ = '1.0.0'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -78,38 +78,30 @@ class GenMMAPTestCase(TestCase):
     def test_missing_args(self) -> None:
         '''Test missing args'''
         sys.argv.clear()
-        sys.argv.insert(0, 'python3')
-        sys.argv.insert(1, 'gen_gen_mmap_run.py')
         generator: GenMMAP = GenMMAP()
         self.assertFalse(generator.process())
 
     def test_wrong_arg(self) -> None:
         '''Test wrong arg'''
         sys.argv.clear()
-        sys.argv.insert(0, 'python3')
-        sys.argv.insert(1, 'gen_gen_mmap_run.py')
-        sys.argv.insert(2, '-d')
-        sys.argv.insert(3, 'wrong_pro')
+        sys.argv.insert(0, '-d')
+        sys.argv.insert(1, 'wrong_pro')
         generator: GenMMAP = GenMMAP()
         self.assertFalse(generator.process())
 
     def test_process(self) -> None:
         '''Generate project structure'''
         sys.argv.clear()
-        sys.argv.insert(0, 'python3')
-        sys.argv.insert(1, 'gen_gen_mmap_run.py')
-        sys.argv.insert(2, '-g')
-        sys.argv.insert(3, 'latest_pro')
+        sys.argv.insert(0, '-n')
+        sys.argv.insert(1, 'latest_pro')
         generator: GenMMAP = GenMMAP()
         self.assertTrue(generator.process())
 
     def test_tool_not_operational(self) -> None:
         '''Test not operational'''
         sys.argv.clear()
-        sys.argv.insert(0, 'python3')
-        sys.argv.insert(1, 'gen_gen_mmap_run.py')
-        sys.argv.insert(2, '-g')
-        sys.argv.insert(3, 'fresh')
+        sys.argv.insert(0, '-n')
+        sys.argv.insert(1, 'fresh')
         generator: GenMMAP = GenMMAP()
         generator.tool_operational = False
         self.assertFalse(generator.process())
@@ -117,10 +109,8 @@ class GenMMAPTestCase(TestCase):
     def test_pro_already_exists(self) -> None:
         '''Test pro already exists'''
         sys.argv.clear()
-        sys.argv.insert(0, 'python3')
-        sys.argv.insert(1, 'gen_gen_mmap_run.py')
-        sys.argv.insert(2, '-g')
-        sys.argv.insert(3, 'fresh_new')
+        sys.argv.insert(0, '-n')
+        sys.argv.insert(1, 'fresh_new')
         generator: GenMMAP = GenMMAP()
         makedirs('fresh_new')
         self.assertFalse(generator.process())

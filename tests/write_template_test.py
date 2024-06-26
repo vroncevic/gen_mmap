@@ -41,7 +41,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2024, https://vroncevic.github.io/gen_mmap'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/vroncevic/gen_mmap/blob/dev/LICENSE'
-__version__ = '1.1.0'
+__version__ = '1.0.0'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -88,7 +88,9 @@ class WriteTemplateTestCase(TestCase):
         '''Test write templates None'''
         template = WriteTemplate()
         with self.assertRaises(ATSTypeError):
-            self.assertFalse(template.write(None, 'none_simple_test'))
+            self.assertFalse(template.write(
+                None, 'none_simple_test'  # type: ignore
+            ))
 
     def test_write_template(self) -> None:
         '''Test write templates'''

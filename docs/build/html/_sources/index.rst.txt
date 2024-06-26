@@ -1,7 +1,7 @@
-Generate message queue
------------------------
+Generate shared memory segments
+---------------------------------
 
-**gen_mmap** is framework for generation message queue modules.
+**gen_mmap** is framework for generation shared memory segments modules.
 
 Developed in `python <https://www.python.org/>`_ code: **100%**.
 
@@ -85,24 +85,26 @@ Tool structure
 .. code-block:: bash
 
     gen_mmap/
-        ├── conf/
-        │   ├── gen_mmap.cfg
-        │   ├── gen_mmap.logo
-        │   ├── gen_mmap_util.cfg
-        │   ├── project.yaml
-        │   └── template/
-        │       └── generator_test.template
-        ├── __init__.py
-        ├── log/
-        │   └── gen_mmap.log
-        ├── pro/
-        │   ├── __init__.py
-        │   ├── read_template.py
-        │   └── write_template.py
-        └── run/
-            └── gen_mmap_run.py
-        
-        6 directories, 11 files
+       ├── conf/
+       │   ├── gen_mmap.cfg
+       │   ├── gen_mmap.logo
+       │   ├── gen_mmap_util.cfg
+       │   ├── project.yaml
+       │   └── template/
+       │       ├── mmap_segment.template
+       │       ├── read_mmap_segment.template
+       │       └── write_mmap_segment.template
+       ├── __init__.py
+       ├── log/
+       │   └── gen_mmap.log
+       ├── pro/
+       │   ├── __init__.py
+       │   ├── read_template.py
+       │   └── write_template.py
+       └── run/
+           └── gen_mmap_run.py
+    
+    6 directories, 13 files
 
 Copyright and licence
 ----------------------
