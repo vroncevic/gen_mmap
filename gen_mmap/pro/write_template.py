@@ -39,7 +39,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2024, https://vroncevic.github.io/gen_mmap'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/vroncevic/gen_mmap/blob/dev/LICENSE'
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -59,7 +59,7 @@ class WriteTemplate(FileCheck):
                 | write - Writes a templates with parameters.
     '''
 
-    _GEN_VERBOSE: str = 'ARMPICOM::PRO::WRITE_TEMPLATE'
+    _GEN_VERBOSE: str = 'GEN_MMAP::PRO::WRITE_TEMPLATE'
 
     def __init__(self, verbose: bool = False) -> None:
         '''
