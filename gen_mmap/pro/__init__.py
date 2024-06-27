@@ -42,7 +42,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2024, https://vroncevic.github.io/gen_mmap'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/vroncevic/gen_mmap/blob/dev/LICENSE'
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -50,7 +50,7 @@ __status__ = 'Updated'
 
 class GenMMAPSetup(FileCheck, ProConfig, ProName):
     '''
-        Defines class GenArmPICOM with attribute(s) and method(s).
+        Defines class GenMMAPSetup with attribute(s) and method(s).
         Generates project setup for MMAP by templates and parameters.
 
         It defines:
@@ -61,10 +61,10 @@ class GenMMAPSetup(FileCheck, ProConfig, ProName):
                 | _reader - Reader API.
                 | _writer - Writer API.
             :methods:
-                | __init__ - Initials GenArmPICOM constructor.
+                | __init__ - Initials GenMMAPSetup constructor.
                 | get_reader - Gets template reader.
                 | get_writer - Gets template writer.
-                | gen_project - Generates RPI PI Pico project structure.
+                | gen_project - Generates MMAP project structure.
     '''
 
     _GEN_VERBOSE: str = 'GEN_MMAP::PRO::GEN_MMAP_SETUP'
@@ -72,7 +72,7 @@ class GenMMAPSetup(FileCheck, ProConfig, ProName):
 
     def __init__(self, verbose: bool = False) -> None:
         '''
-            Initials GenArmPICOM constructor.
+            Initials GenMMAPSetup constructor.
 
             :param verbose: Enable/Disable verbose option
             :type verbose: <bool>
@@ -117,7 +117,7 @@ class GenMMAPSetup(FileCheck, ProConfig, ProName):
 
     def gen_project(self, pro_name: str | None, verbose: bool = False) -> bool:
         '''
-            Generates RPI PI Pico project structure.
+            Generates MMAP project structure.
 
             :param pro_name: Project name | None
             :type pro_name: <str> | <NoneType>
