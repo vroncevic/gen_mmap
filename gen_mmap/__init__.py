@@ -44,7 +44,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2024, https://vroncevic.github.io/gen_mmap'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/vroncevic/gen_mmap/blob/dev/LICENSE'
-__version__ = '1.0.1'
+__version__ = '1.0.2'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -77,21 +77,21 @@ class GenMMAP(CfgCLI):
 
     def __init__(self, verbose: bool = False) -> None:
         '''
-            Initials ArmPICOM constructor.
+            Initials GenMMAP constructor.
 
             :param verbose: Enable/Disable verbose option
             :type verbose: <bool>
             :exceptions: None
         '''
         current_dir: str = dirname(realpath(__file__))
-        armpicom_property: Dict[str, str | bool] = {
+        gen_mmap_property: Dict[str, str | bool] = {
             'ats_organization': 'vroncevic',
             'ats_repository': f'{self._GEN_VERBOSE.lower()}',
             'ats_name': f'{self._GEN_VERBOSE.lower()}',
             'ats_logo_path': f'{current_dir}{self._LOGO}',
             'ats_use_github_infrastructure': True
         }
-        Splash(armpicom_property, verbose)
+        Splash(gen_mmap_property, verbose)
         base_info: str = f'{current_dir}{self._CONFIG}'
         super().__init__(base_info, verbose)
         verbose_message(
