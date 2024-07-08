@@ -131,6 +131,16 @@ Generator structure
     6 directories, 13 files
 ```
 
+### Code coverage
+
+| Name | Stmts | Miss | Cover |
+|------|-------|------|-------|
+| `gen_mmap/__init__.py` | 71 | 12 | 83% |
+| `gen_mmap/pro/__init__.py` | 59 | 2 | 97% |
+| `gen_mmap/pro/read_template.py` | 53 | 2 | 96% |
+| `gen_mmap/pro/write_template.py` | 50 | 3 | 94% |
+| **Total** | 233 | 19 | 92% |
+
 ### Docs
 
 [![Documentation Status](https://readthedocs.org/projects/gen_mmap/badge/?version=latest)](https://gen-mmap.readthedocs.io/projects/gen_mmap/en/latest/?badge=latest)
