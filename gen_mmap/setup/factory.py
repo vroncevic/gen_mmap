@@ -63,6 +63,7 @@ class GenMmapBundleFactory:
                 | _info_file - Path to the gen_mmap info file.
             :methods:
                 | create_bundle - Creates the gen_mmap bundle with optional pre-configured options.
+                | get_version - Returns the factory version.
     '''
 
     _info_file: str = 'gen_mmap/infrastructure/config/gen_mmap.cfg'
@@ -129,3 +130,14 @@ class GenMmapBundleFactory:
                 cli=cli
             )
         )
+
+    @classmethod
+    def get_version(cls) -> str:
+        '''
+            Returns the factory version.
+
+            :return: The factory version.
+            :exceptions: None.
+        '''
+        return __version__
+

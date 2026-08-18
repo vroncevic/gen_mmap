@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
 '''
@@ -20,6 +19,8 @@ Info
     Defines setup for tool gen_mmap.
 '''
 
+from __future__ import annotations
+
 from os import walk
 from os.path import abspath, dirname, join, relpath
 from setuptools import setup, find_packages
@@ -28,7 +29,7 @@ __author__: str = 'Vladimir Roncevic'
 __copyright__: str = '(C) 2026, https://vroncevic.github.io/gen_mmap'
 __credits__: list[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__: str = 'https://github.com/vroncevic/gen_mmap/blob/dev/LICENSE'
-__version__: str = '1.0.3'
+__version__: str = '1.0.5'
 __maintainer__: str = 'Vladimir Roncevic'
 __email__: str = 'elektron.ronca@gmail.com'
 __status__: str = 'Updated'
@@ -44,15 +45,12 @@ VERSIONS: list[str] = ['3.12', '3.13', '3.14']
 SUPPORTED_PY_VERSIONS: list[str] = [f'{PROGRAMMING_LANG} {VERSION}' for VERSION in VERSIONS]
 PYP_CLASSIFIERS: list[str] = SUPPORTED_PY_VERSIONS
 
-
 def find_package_data(pkg: str) -> list[str]:
     '''
         Finds all files in package to include in package_data.
 
         :param pkg: Package folder name.
-        :type pkg: <str>
         :return: List of package files relative to the package folder.
-        :rtype: <list[str]>
         :exceptions: None.
     '''
     package_data: list[str] = []
@@ -70,10 +68,9 @@ def find_package_data(pkg: str) -> list[str]:
 
     return package_data
 
-
 setup(
     name='gen_mmap',
-    version='1.0.3',
+    version='1.0.5',
     description='Generating mmap project',
     author='Vladimir Roncevic',
     author_email='elektron.ronca@gmail.com',

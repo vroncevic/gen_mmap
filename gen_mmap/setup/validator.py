@@ -22,6 +22,8 @@ Info
 from __future__ import annotations
 
 from ats_utilities.base.setup.bundle import BaseBundle
+from ats_utilities.exceptions import ATSValueError, ATSTypeError
+from ats_utilities.exceptions import ATSValueError, ATSTypeError
 from ats_utilities.validation.check_value import not_none
 from ats_utilities.validation.check_type import istype
 
@@ -48,6 +50,7 @@ class GenMmapBundleValidator:
 
             :methods:
                 | validate - Validates the gen_mmap bundle.
+                | is_valid - Checks if the gen_mmap bundle is valid.
     '''
 
     @classmethod
@@ -85,3 +88,19 @@ class GenMmapBundleValidator:
         istype(bundle.service, IService, ctx, msg_service_istype)
         istype(bundle.subprocessor, ISubProcessor, ctx, msg_subprocessor_istype)
         istype(bundle.cli, ICLI, ctx, msg_cli_istype)
+
+    @classmethod
+    def is_valid(cls, genmmapbundle: GenMmapBundle) -> bool:
+        '''
+            Checks if the genmmapbundle is valid.
+
+            :param genmmapbundle: The genmmapbundle to be checked.
+            :return: True if valid, False otherwise.
+        '''
+        try:
+            cls.validate(genmmapbundle)
+            return True
+
+        except (ATSValueError, ATSTypeError):
+            return False
+

@@ -1,5 +1,5 @@
-gen\_mmap.pro package
-=====================
+gen\_mmap.core.model package
+============================
 
 Submodules
 ----------
@@ -7,13 +7,12 @@ Submodules
 .. toctree::
    :maxdepth: 4
 
-   gen_mmap.pro.read_template
-   gen_mmap.pro.write_template
+   gen_mmap.core.model.project_setup
 
 Module contents
 ---------------
 
-.. automodule:: gen_mmap.pro
+.. automodule:: gen_mmap.core.model
    :members:
    :undoc-members:
    :show-inheritance:

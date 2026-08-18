@@ -24,6 +24,7 @@ from __future__ import annotations
 from collections.abc import Mapping
 
 from ats_utilities.validation.check_type import istype
+from ats_utilities.exceptions import ATSValueError, ATSTypeError
 from ats_utilities.validation.check_value import not_none
 
 from gen_mmap.setup.dependencies import GenMmapBundleDependencies
@@ -47,6 +48,7 @@ class GenMmapBundleDependenciesValidator:
 
             :methods:
                 | validate - Validates the gen_mmap bundle dependencies.
+                | is_valid - Checks if the gen_mmap bundle dependencies is valid.
     '''
 
     @classmethod
@@ -75,3 +77,19 @@ class GenMmapBundleDependenciesValidator:
 
             not_none(attribute, ctx, msg_attr_name_none)
             istype(attribute, expected_type, ctx, msg_attr_name_istype)
+
+    @classmethod
+    def is_valid(cls, genmmapbundledependencies: GenMmapBundleDependencies) -> bool:
+        '''
+            Checks if the genmmapbundledependencies is valid.
+
+            :param genmmapbundledependencies: The genmmapbundledependencies to be checked.
+            :return: True if valid, False otherwise.
+        '''
+        try:
+            cls.validate(genmmapbundledependencies)
+            return True
+
+        except (ATSValueError, ATSTypeError):
+            return False
+

@@ -1,7 +1,7 @@
-gen\_mmap.pro.write\_template module
+gen\_mmap.core.service.engine module
 ====================================
 
-.. automodule:: gen_mmap.pro.write_template
+.. automodule:: gen_mmap.core.service.engine
    :members:
    :undoc-members:
    :show-inheritance:

@@ -1,7 +1,7 @@
-gen\_mmap.pro.read\_template module
+gen\_mmap.setup.dependencies module
 ===================================
 
-.. automodule:: gen_mmap.pro.read_template
+.. automodule:: gen_mmap.setup.dependencies
    :members:
    :undoc-members:
    :show-inheritance:

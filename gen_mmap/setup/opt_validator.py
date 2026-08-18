@@ -24,6 +24,7 @@ from __future__ import annotations
 from collections.abc import Mapping
 
 from ats_utilities.validation.check_type import istype
+from ats_utilities.exceptions import ATSValueError, ATSTypeError
 from ats_utilities.validation.check_value import not_none
 
 from gen_mmap.setup.options import GenMmapBundleOptions
@@ -47,6 +48,7 @@ class GenMmapBundleOptionsValidator:
 
             :methods:
                 | validate - Validates the gen_mmap bundle options.
+                | is_valid - Checks if the gen_mmap bundle options is valid.
     '''
 
     @classmethod
@@ -73,3 +75,19 @@ class GenMmapBundleOptionsValidator:
             attribute = options.get(attr_name)
 
             istype(attribute, expected_type, ctx, msg_attr_name_istype)
+
+    @classmethod
+    def is_valid(cls, genmmapbundleoptions: GenMmapBundleOptions) -> bool:
+        '''
+            Checks if the genmmapbundleoptions is valid.
+
+            :param genmmapbundleoptions: The genmmapbundleoptions to be checked.
+            :return: True if valid, False otherwise.
+        '''
+        try:
+            cls.validate(genmmapbundleoptions)
+            return True
+
+        except (ATSValueError, ATSTypeError):
+            return False
+
