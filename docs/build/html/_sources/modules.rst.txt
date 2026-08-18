@@ -5,4 +5,4 @@ gen_mmap
    :maxdepth: 4
 
    gen_mmap
-
+   main

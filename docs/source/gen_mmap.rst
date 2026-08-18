@@ -7,7 +7,16 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   gen_mmap.pro
+   gen_mmap.core
+   gen_mmap.setup
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   gen_mmap.engine
 
 Module contents
 ---------------
