@@ -36,10 +36,19 @@ other information that should be provided before the tool is installed.
 🚀 Installation
 -----------------
 
-|gen_mmap python3 build|
+|gen_mmap python3 build| |gen_mmap interface checker| |gen_mmap isp checker| |gen_mmap srp checker|
 
 .. |gen_mmap python3 build| image:: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_python3_build.yml/badge.svg
    :target: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_python3_build.yml
+
+.. |gen_mmap interface checker| image:: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_interface_checker.yml/badge.svg
+   :target: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_interface_checker.yml
+
+.. |gen_mmap isp checker| image:: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_isp_checker.yml/badge.svg
+   :target: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_isp_checker.yml
+
+.. |gen_mmap srp checker| image:: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_srp_checker.yml/badge.svg
+   :target: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_srp_checker.yml
 
 Navigate to release `page`_ download and extract release archive.
 
