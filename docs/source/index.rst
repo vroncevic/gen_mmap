@@ -9,13 +9,22 @@ The README is used to introduce the tool and provide instructions on
 how to install the tool, any machine dependencies it may have and any
 other information that should be provided before the tool is installed.
 
-|gen_mmap python checker| |gen_mmap python package| |github issues| |documentation status| |github contributors|
+|gen_mmap python checker| |gen_mmap python package| |gen_mmap interface checker| |gen_mmap isp checker| |gen_mmap srp checker| |github issues| |documentation status| |github contributors|
 
 .. |gen_mmap python checker| image:: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_python_checker.yml/badge.svg
    :target: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_python_checker.yml
 
 .. |gen_mmap python package| image:: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_package_checker.yml/badge.svg
    :target: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_package.yml
+
+.. |gen_mmap interface checker| image:: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_interface_checker.yml/badge.svg
+   :target: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_interface_checker.yml
+
+.. |gen_mmap isp checker| image:: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_isp_checker.yml/badge.svg
+   :target: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_isp_checker.yml
+
+.. |gen_mmap srp checker| image:: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_srp_checker.yml/badge.svg
+   :target: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_srp_checker.yml
 
 .. |github issues| image:: https://img.shields.io/github/issues/vroncevic/gen_mmap.svg
    :target: https://github.com/vroncevic/gen_mmap/issues
@@ -36,19 +45,10 @@ other information that should be provided before the tool is installed.
 🚀 Installation
 -----------------
 
-|gen_mmap python3 build| |gen_mmap interface checker| |gen_mmap isp checker| |gen_mmap srp checker|
+|gen_mmap python3 build|
 
 .. |gen_mmap python3 build| image:: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_python3_build.yml/badge.svg
    :target: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_python3_build.yml
-
-.. |gen_mmap interface checker| image:: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_interface_checker.yml/badge.svg
-   :target: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_interface_checker.yml
-
-.. |gen_mmap isp checker| image:: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_isp_checker.yml/badge.svg
-   :target: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_isp_checker.yml
-
-.. |gen_mmap srp checker| image:: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_srp_checker.yml/badge.svg
-   :target: https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_srp_checker.yml
 
 Navigate to release `page`_ download and extract release archive.
 

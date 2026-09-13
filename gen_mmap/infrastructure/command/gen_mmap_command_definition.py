@@ -101,6 +101,15 @@ class GenMmapCommandDefinition:
                 required=True,
                 choices=None,
                 nargs=None
+            ),
+            OptionData(
+                name="--demo",
+                help_text="generate demo writer/reader applications and CMake build environment",
+                action="store_true",
+                default=False,
+                required=False,
+                choices=None,
+                nargs=None
             )
         ]
 

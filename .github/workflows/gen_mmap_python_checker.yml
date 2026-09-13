@@ -2,12 +2,12 @@ name: gen_mmap_python_checker
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, main ]
     paths:
       - 'gen_mmap/**/*.py'
       - 'setup.py'
   pull_request:
-    branches: [ master ]
+    branches: [ master, main ]
     paths:
       - 'gen_mmap/**/*.py'
       - 'setup.py'

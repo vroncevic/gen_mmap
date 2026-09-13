@@ -9,7 +9,7 @@ Info
 
 from __future__ import annotations
 
-import unittest
+from unittest import TestCase
 from unittest.mock import Mock
 
 from gen_mmap.core.service.iservice import IService
@@ -17,13 +17,13 @@ from gen_mmap.infrastructure.command.gen_mmap_command_definition import GenMmapC
 from gen_mmap.infrastructure.command.gen_mmap_command_executor import GenMmapCommandExecutor
 
 
-class TestGenMmapCommand(unittest.TestCase):
+class TestGenMmapCommand(TestCase):
 
     def test_definition(self) -> None:
         definition = GenMmapCommandDefinition()
         self.assertEqual(definition.name, 'create')
         self.assertEqual(definition.help_text, 'Generate Mmap project skeleton')
-        self.assertEqual(len(definition.options), 3)
+        self.assertEqual(len(definition.options), 4)
         self.assertTrue(isinstance(str(definition), str))
 
     def test_executor_execute_success(self) -> None:
@@ -55,3 +55,8 @@ class TestGenMmapCommand(unittest.TestCase):
         definition = GenMmapCommandDefinition()
         executor = GenMmapCommandExecutor(definition)
         self.assertTrue(isinstance(str(executor), str))
+
+    def test_executor_get_definition(self) -> None:
+        definition = GenMmapCommandDefinition()
+        executor = GenMmapCommandExecutor(definition)
+        self.assertEqual(executor.get_definition(), definition)

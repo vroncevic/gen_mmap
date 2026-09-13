@@ -7,6 +7,19 @@
         "exclude": [
             "**/.coverage",
             "**/.vscode/**",
+            "**/.git/**",
+            "CMakeLists.txt",
+            "demo_*.c"
+        ]
+    },
+    "base_demo": {
+        "source_dir": "base",
+        "path_replacements": {
+            "dummy_nonexistent": "project_name"
+        },
+        "exclude": [
+            "**/.coverage",
+            "**/.vscode/**",
             "**/.git/**"
         ]
     }
