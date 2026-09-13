@@ -10,7 +10,7 @@ The README is used to introduce the tool and provide instructions on
 how to install the tool, any machine dependencies it may have and any
 other information that should be provided before the tool is installed.
 
-[![gen_mmap python checker](https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_python_checker.yml/badge.svg)](https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_python_checker.yml) [![gen_mmap package checker](https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_package_checker.yml/badge.svg)](https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_package.yml) [![GitHub issues open](https://img.shields.io/github/issues/vroncevic/gen_mmap.svg)](https://github.com/vroncevic/gen_mmap/issues) [![GitHub contributors](https://img.shields.io/github/contributors/vroncevic/gen_mmap.svg)](https://github.com/vroncevic/gen_mmap/graphs/contributors)
+[![gen_mmap python checker](https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_python_checker.yml/badge.svg)](https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_python_checker.yml) [![gen_mmap package checker](https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_package_checker.yml/badge.svg)](https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_package.yml) [![gen_mmap interface checker](https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_interface_checker.yml/badge.svg)](https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_interface_checker.yml) [![gen_mmap isp checker](https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_isp_checker.yml/badge.svg)](https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_isp_checker.yml) [![gen_mmap srp checker](https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_srp_checker.yml/badge.svg)](https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_srp_checker.yml) [![GitHub issues open](https://img.shields.io/github/issues/vroncevic/gen_mmap.svg)](https://github.com/vroncevic/gen_mmap/issues) [![GitHub contributors](https://img.shields.io/github/contributors/vroncevic/gen_mmap.svg)](https://github.com/vroncevic/gen_mmap/graphs/contributors)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -38,7 +38,7 @@ Used next development environment
 
 ![debian linux os](https://raw.githubusercontent.com/vroncevic/gen_mmap/dev/docs/debtux.png)
 
-[![gen_mmap python3 build](https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_python3_build.yml/badge.svg)](https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_python3_build.yml) [![gen_mmap_interface_checker](https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_interface_checker.yml/badge.svg)](https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_interface_checker.yml) [![gen_mmap_isp_checker](https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_isp_checker.yml/badge.svg)](https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_isp_checker.yml) [![gen_mmap_srp_checker](https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_srp_checker.yml/badge.svg)](https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_srp_checker.yml)
+[![gen_mmap python3 build](https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_python3_build.yml/badge.svg)](https://github.com/vroncevic/gen_mmap/actions/workflows/gen_mmap_python3_build.yml)
 
 Currently there are four ways to install package
 * Install process based on using pip mechanism
@@ -190,7 +190,7 @@ Tool structure
 
 | Name | Stmts | Miss | Cover |
 |------|-------|------|-------|
-| `gen_mmap/__init__.py` | 8 | 0 | 100%|
+| `gen_mmap/__init__.py` | 9 | 0 | 100%|
 | `gen_mmap/core/__init__.py` | 9 | 0 | 100%|
 | `gen_mmap/core/model/__init__.py` | 9 | 0 | 100%|
 | `gen_mmap/core/model/project_setup.py` | 14 | 0 | 100%|
@@ -215,21 +215,21 @@ Tool structure
 | `gen_mmap/infrastructure/command/__init__.py` | 9 | 0 | 100%|
 | `gen_mmap/infrastructure/command/command.py` | 16 | 0 | 100%|
 | `gen_mmap/infrastructure/command/gen_mmap_command_definition.py` | 24 | 0 | 100%|
-| `gen_mmap/infrastructure/command/gen_mmap_command_executor.py` | 21 | 0 | 100%|
+| `gen_mmap/infrastructure/command/gen_mmap_command_executor.py` | 23 | 0 | 100%|
 | `gen_mmap/infrastructure/command/icommand_definition.py` | 14 | 0 | 100%|
-| `gen_mmap/infrastructure/command/icommand_executor.py` | 13 | 0 | 100%|
-| `gen_mmap/infrastructure/subprocessor.py` | 57 | 0 | 100%|
+| `gen_mmap/infrastructure/command/icommand_executor.py` | 14 | 0 | 100%|
+| `gen_mmap/infrastructure/subprocessor.py` | 59 | 0 | 100%|
 | `gen_mmap/setup/__init__.py` | 9 | 0 | 100%|
 | `gen_mmap/setup/bundle.py` | 23 | 0 | 100%|
 | `gen_mmap/setup/dep_validator.py` | 36 | 0 | 100%|
 | `gen_mmap/setup/dependencies.py` | 19 | 0 | 100%|
-| `gen_mmap/setup/factory.py` | 48 | 0 | 100%|
+| `gen_mmap/setup/factory.py` | 49 | 0 | 100%|
 | `gen_mmap/setup/keys.py` | 27 | 0 | 100%|
 | `gen_mmap/setup/opt_validator.py` | 34 | 0 | 100%|
 | `gen_mmap/setup/options.py` | 12 | 0 | 100%|
 | `gen_mmap/setup/registry.py` | 32 | 0 | 100%|
-| `gen_mmap/setup/validator.py` | 49 | 0 | 100%|
-| **Total** | 930 | 0 | 100% |
+| `gen_mmap/setup/validator.py` | 48 | 0 | 100%|
+| **Total** | 936 | 0 | 100% |
 
 </details>
 

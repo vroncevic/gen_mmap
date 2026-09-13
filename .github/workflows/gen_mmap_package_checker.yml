@@ -1,13 +1,13 @@
 name: gen_mmap_package_checker
 on:
   push:
-    branches: [ master ]
+    branches: [ master, main ]
     paths:
       - 'gen_mmap/**'
       - 'tests/**'
       - 'setup.py'
   pull_request:
-    branches: [ master ]
+    branches: [ master, main ]
     paths:
       - 'gen_mmap/**'
       - 'tests/**'

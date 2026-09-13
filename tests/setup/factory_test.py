@@ -32,4 +32,4 @@ class TestGenMmapBundleFactory(unittest.TestCase):
             GenMmapBundleFactory.create_bundle(options)
 
     def test_get_version(self) -> None:
-        self.assertEqual(GenMmapBundleFactory.get_version(), '1.0.5')
+        self.assertEqual(GenMmapBundleFactory.get_version(), '1.0.6')
